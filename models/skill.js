@@ -6,9 +6,16 @@ const skills = [
 
 module.exports ={
     skills,
-    getAll
+    getAll,
+    create
 }
 
 function getAll() {
     return skills;
+}
+
+function create(skill){
+    skill.id = Date.now() % 1000000
+    skill.rating = 5
+    skills.push(skill)
 }
