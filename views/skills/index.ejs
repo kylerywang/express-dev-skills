@@ -1,0 +1,12 @@
+<%- include('../partials/header.ejs') %>
+<ul>
+    <% skills.forEach(function(s) { %>
+      <li>
+        <a href="/skills">
+          <%= s.skill %>
+        </a>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/todos/new">Add To-Do</a>
+<%- include('../partials/footer') %>
